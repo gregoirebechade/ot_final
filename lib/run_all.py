@@ -136,10 +136,14 @@ if __name__ =='__main__' :
             classifier.fit(X_train_bis, y_train)
             prediction_was = classifier.predict(X_test_bis)
             t2 = time.time()
+            try : 
+                f1 = f1_score(y_test, prediction_was)
+            except Exception as e :
+                f1 = 0
             print('prediction : ',prediction_was)
             print('true labels : ',y_test)
-            print('f1 score : ',f1_score(y_test, prediction_was))
+            print('f1 score : ',f1)
             print('accuracy', np.mean(prediction_was == y_test))
             with open('./results.txt', 'a') as f : 
-                f.write('g_w = ' + str(g_w) + ' g_s = ' + str(g_s) + ' f1 score : ' + str(f1_score(y_test, prediction_was)) + ' accuracy : ' + str(np.mean(prediction_was == y_test)) + ' time : ' + str(t2-t1) + '\n')
+                f.write('g_w = ' + str(g_w) + ' g_s = ' + str(g_s) + ' f1 score : ' + str(f1) + ' accuracy : ' + str(np.mean(prediction_was == y_test)) + ' time : ' + str(t2-t1) + '\n')
             
