@@ -135,8 +135,19 @@ def scg(a, b, M, reg1, reg2, reg3, beta, f1, f2, f3, df1, df2, df3, j_dist, G0=N
 
 
 
-    coef_lw = 0.1 # gregoire
-    coef_gw = 10 # gregoire 
+    coef_lw = 10 # gregoire
+    coef_gw = 1/10 # gregoire 
+    
+    with open('./params.txt', 'r') as f : # gregoire
+        lines = f.readlines()
+        params=[]
+        for line in lines : 
+            params.append(float(line))
+        assert len(params) == 2
+        coef_lw = params[0]
+        coef_gw = params[1]
+    # print('coef_lw', coef_lw) # gregoire 
+    # print('coef_gw', coef_gw) # gregoire
 
 
 

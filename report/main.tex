@@ -152,6 +152,10 @@ The step size is then determined through a grid-search, and the algorithm stops 
 
 Corrolary 1 of the paper states that it takes $O(\frac{1}{\epsilon^2})$ iterations to find a solution whose sub-optimality gap is below $\epsilon$. 
 
+This algorithm has a complexity of $O(t(n^3 + kn^2 ))$ with $t$ the number of iterations, $n = max(n_1, n_2)$ the number of nodes in the largest graph, and $k$ the dimension of the embeddings of the nodes. 
+However, in my experiences, I have noticed that the computational time was multiplied by a factor 9 when the number of nodes was multiplied by 3, so the dominant term might be the squared one. 
+This complexity is therefore similar to the one of the Sinkhorn algorithm, which has a complexity of $O(T \times n^2)$. 
+However, with different datasets, the complexity might be in $n^3$ and the computational time might be very high.
 
 \subsection{Some concepts}
 
@@ -249,7 +253,7 @@ I have then generated a training set of 400 graphs, containing 200 graphs of eac
     \centering
     \begin{subfigure}{0.4\textwidth}
         \includegraphics[width=\textwidth]{figures/graph_k3.png}
-        \caption{Example of a graph with k = 2 TODO CHANGE IMAGE}
+        \caption{Example of a graph with k = 2 }
     \end{subfigure}
     \begin{subfigure}{0.4\textwidth}
         \includegraphics[width=\textwidth]{figures/graph_k3.png}
@@ -288,8 +292,8 @@ See Fig. \ref{fig:hist_edges} for more details.
 The SVC classifier implemented in the paper was used to classify the graphs. 
 It was trained on the training set and tested on the test set.
 The performances was evaluated through accuracy and F1 score.
-I also decided ti study the impact of the differnt terms by setting some regularization terms to 0 and by making some vary along different values. 
-The computational time and the performance were then compared. 
+I also decided to study the impact of the differnt terms by setting some regularization terms to 0 and by making some vary along different values. 
+The computational time and the performances in term of F1-scorr and accuracy was were then compared. 
 
 Two baselines model were also tested: the default random forest classifier from sklearn, and a SVM classifier with a gaussian kernel.
 
@@ -306,11 +310,29 @@ petites erreurs : " two strongly convex terms " ben boyons... on me prend pour u
 
 \section{Connection with the course}
 
+First, a question that arises in the paper is to find the optimal transport plan between two graphs, which are ambedded as points in $\mathbb{R}^m \times \mathbb{R}^k$.
+This problem is an optimal transport between two sums of a different amount of diracs in very high dimension. 
+It therefore corresponds to the Kantorovich problem with discrete distributions, that was studied in the course 2. 
+However, the authors have a differnet approach than the one studied in course to solve this problem. 
+Instead of adding an entropic regularization that makes the problem strictly convex, they introduce two regularization terms that enable to preserve the structure of the graphs, but make the computations harder. 
+
+
+
+The whole problem of the paper is to solve an optimal transport between two probability distributions, with a penalty adapted to the nature of the data. 
+It has a clear link with the course 4, that presents another algorithm to solve the optimal transport problem: the Sinkhorn algorithm.
+In the course, the penalty was the Shannon entropy of the transport plan, while the two penalties introduced in the paper are the local barycentric and the global connectivity penalties.
+The difference with the course is that the Shannon penalty makes the problem strictly convex, while despite the fact that the gloabl barycentric penalty is strongly convex with respect to $\gamma$, the Gromo-Wasserstein distance is not convex, and therefore leads to a more complex optimization problem.
+Therefore, the authors managed to prove that the algorith converges toward a stationary point, there is no guarantees on the convergence to the global minimum.
+On the contrary, the Sinkhorn algorithm consists in iterations of a contracting function, which has as a consequence that the algorithm converges. 
+
+
 connection avec cours 4: régularisation intelligente. 
 Par contre le problème n'est pas strictement convexe
 
 lien avec sinkhorn, différences avec l'algo vu en cours. 
 
+
+\newpage
 \printbibliography
 
 \end{document}

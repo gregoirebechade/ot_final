@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1735326920 "main.bcf" "main.bbl" "main" 1735337521 0
+["biber main"] 1735326920 "main.bcf" "main.bbl" "main" 1735595235 0
   "./bibliography/references.bib" 1735322552 2733 61046eb5c5a565410c9c4396f489dfe1 ""
-  "main.bcf" 1735337519 108402 fd0dc80052b6033be1c9735c353285b4 "pdflatex"
+  "main.bcf" 1735595234 108402 fd0dc80052b6033be1c9735c353285b4 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1735337516 "c:/Users/grego/Documents/code/RWK/report/main.tex" "main.pdf" "main" 1735337521 0
+["pdflatex"] 1735595231 "c:/Users/grego/Documents/code/RWK/report/main.tex" "main.pdf" "main" 1735595235 0
   "C:/Users/grego/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1734185076 113428 a280e18065651d82029025b185cb382a ""
   "C:/Users/grego/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1095.pk" 1719568939 28976 d9db75ca4b56c83a8f70afe4fe96ae09 ""
   "C:/Users/grego/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200.pk" 1717156662 31952 8bcd38facc752fc208bbb3dba0164919 ""
@@ -144,16 +144,16 @@
   "C:/Users/grego/AppData/Local/Programs/MiKTeX/tex/latex/setspace/setspace.sty" 1670403145 22490 8cac309b79a4c53a4ffce4b1b07aead0 ""
   "C:/Users/grego/AppData/Local/Programs/MiKTeX/tex/latex/titlesec/titlesec.sty" 1699094857 48766 0b93839be28e9744a24c45075c75b2e2 ""
   "C:/Users/grego/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "c:/Users/grego/Documents/code/RWK/report/main.tex" 1735337515 18704 aa1800844457815ab2b6dd7b6d5ff3ce ""
+  "c:/Users/grego/Documents/code/RWK/report/main.tex" 1735595225 21175 c934362d5b7818dcfc664cfaa28d97c9 ""
   "figures/graph_k3.png" 1735324979 43180 3c7653bf2bd87db153398014856aa992 ""
   "figures/hist_2_nn.png" 1735323451 8485 17009bec6ff164465582d17148f0fb24 ""
   "figures/hist_3_nn.png" 1735323461 7954 2904dec8ea7afb35a1e581cbfed1742e ""
   "figures/kernel_trick.png" 1735322673 107455 2877c660ff440c0319432bdf29114cbe ""
-  "main.aux" 1735337519 4907 59ccbc45c3d3060c76065bb10834961b "pdflatex"
+  "main.aux" 1735595234 4907 70b52a0fcedd9d3ae1afc588d7469413 "pdflatex"
   "main.bbl" 1735326937 12504 202361310152c3b0617c073c2bc55674 "biber main"
-  "main.out" 1735337519 2882 da857180dcad0b0bbccac9e2fd82a09a "pdflatex"
-  "main.run.xml" 1735337519 2323 7b681c5726d3f75dff32db60ac0f2508 "pdflatex"
-  "main.tex" 1735337515 18704 aa1800844457815ab2b6dd7b6d5ff3ce ""
+  "main.out" 1735595234 2882 da857180dcad0b0bbccac9e2fd82a09a "pdflatex"
+  "main.run.xml" 1735595234 2323 7b681c5726d3f75dff32db60ac0f2508 "pdflatex"
+  "main.tex" 1735595225 21175 c934362d5b7818dcfc664cfaa28d97c9 ""
   (generated)
   "main.aux"
   "main.bcf"
