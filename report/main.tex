@@ -218,7 +218,9 @@ The gaussian kernel is defined as : $K(x, x') = exp(-\frac{\left\lVert x - x' \r
 $K(x, x') = e^{-\frac{\left\lVert x \right\rVert ^2}{2\sigma^2}} \times e^{-\frac{\left\lVert x' \right\rVert ^2}{2\sigma^2}} \times e^{ \frac{x^T x'}{\sigma^2}}$.\\
 However, $e^{\frac{x^T x'}{\sigma^2}} = \sum_{k=0}^{\infty} \frac{1}{k!} \left( \frac{x^T x'}{\sigma^2} \right)^k$, which can be expressed as a scalar product. 
 
+\textbf{SVC classifiers: }\\
 
+TODO ADD CONTENU
 \subsubsection{Heat kernel random walk}
 
 As discussed above, a key step of the method is to define an embedding function that takes as an input a node and outputs a vector in $\mathbb{R}^m$.
@@ -252,7 +254,7 @@ I have then generated a training set of 400 graphs, containing 200 graphs of eac
 \begin{figure}[h]
     \centering
     \begin{subfigure}{0.4\textwidth}
-        \includegraphics[width=\textwidth]{figures/graph_k3.png}
+        \includegraphics[width=\textwidth]{figures/graph_k2.png}
         \caption{Example of a graph with k = 2 }
     \end{subfigure}
     \begin{subfigure}{0.4\textwidth}
@@ -265,8 +267,8 @@ I have then generated a training set of 400 graphs, containing 200 graphs of eac
 
 \textbf{Some insights on the data: }\\
 
-The 200 2-nn graphs contain TODO ADD NUMBER edges in average. 
-The 200 3-nn graphs contain TODO ADD NUMBER edges in average.
+The 200 2-nn graphs contain 19.45 edges in average. 
+The 200 3-nn graphs contain 28.55 edges in average.
 See Fig. \ref{fig:hist_edges} for more details. 
 
 56.5 \% of the 2nn graphs are connected, and 90.0 \% of the 3nn graphs are connected.
@@ -310,7 +312,7 @@ petites erreurs : " two strongly convex terms " ben boyons... on me prend pour u
 
 \section{Connection with the course}
 
-First, a question that arises in the paper is to find the optimal transport plan between two graphs, which are ambedded as points in $\mathbb{R}^m \times \mathbb{R}^k$.
+First, a question that arises in the paper is to find the optimal transport plan between two graphs, which are embedded as points in $\mathbb{R}^m \times \mathbb{R}^k$.
 This problem is an optimal transport between two sums of a different amount of diracs in very high dimension. 
 It therefore corresponds to the Kantorovich problem with discrete distributions, that was studied in the course 2. 
 However, the authors have a differnet approach than the one studied in course to solve this problem. 
