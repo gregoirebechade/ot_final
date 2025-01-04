@@ -126,11 +126,11 @@ X_test_bis = convert_list_in_array(X_test_bis)
 
 if __name__ =='__main__' : 
     for g_w in [0.1, 0.5, 1, 2, 5, 10]:
-        for g_s in [0.1, 0.5, 1, 2, 5, 10]:
+        for l_w in np.linspace(0.5, 2.1, 9):
             with open('./params.txt', 'w') as f : 
                 f.write(str(g_w) + '\n')
-                f.write(str(g_s) + '\n')
-            print('g_w =', g_w, 'g_s =', g_s)
+                f.write(str(l_w) + '\n')
+            print('g_w =', g_w, 'l_w =', l_w)
             classifier = Graph_RJW_SVC_Classifier()
             t1 = time.time()
             classifier.fit(X_train_bis, y_train)
@@ -144,6 +144,6 @@ if __name__ =='__main__' :
             print('true labels : ',y_test)
             print('f1 score : ',f1)
             print('accuracy', np.mean(prediction_was == y_test))
-            with open('./results.txt', 'a') as f : 
-                f.write('g_w = ' + str(g_w) + ' g_s = ' + str(g_s) + ' f1 score : ' + str(f1) + ' accuracy : ' + str(np.mean(prediction_was == y_test)) + ' time : ' + str(t2-t1) + '\n')
+            with open('./results_bis.txt', 'a') as f : 
+                f.write('g_w = ' + str(g_w) + ' l_w = ' + str(l_w) + ' f1 score : ' + str(f1) + ' accuracy : ' + str(np.mean(prediction_was == y_test)) + ' time : ' + str(t2-t1) + '\n')
             
