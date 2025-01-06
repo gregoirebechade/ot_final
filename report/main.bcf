@@ -2362,15 +2362,18 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">bibliography/references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1">labib2019hamming</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">nikolentzos2017matching</bcf:citekey>
     <bcf:citekey order="2" intorder="1">titouan2019optimal</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">lanckriet2004learning</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">mercer1909xvi</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">labib2019hamming</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">titouan2019optimal</bcf:citekey>
     <bcf:citekey order="5" intorder="1">lanckriet2004learning</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">luss2007support</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">oudot2022cpp</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">oudot2022cpp</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">abu2018watch</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">mercer1909xvi</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">lanckriet2004learning</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">luss2007support</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">oudot2022cpp</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">oudot2022cpp</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">abu2018watch</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">wijesinghe2021regularizedbis</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
