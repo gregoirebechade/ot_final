@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1736108586 "main.bcf" "main.bbl" "main" 1736110949 0
+["biber main"] 1736108586 "main.bcf" "main.bbl" "main" 1736698524 0
   "./bibliography/references.bib" 1736108571 3051 7d5b71bb99e4169135d8dd9704f5e298 ""
-  "main.bcf" 1736110947 108639 9b98a9c64fe5b0009175ea410ac4c634 "pdflatex"
+  "main.bcf" 1736698523 108639 9b98a9c64fe5b0009175ea410ac4c634 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1736110945 "c:/Users/grego/Documents/code/ot_final/report/main.tex" "main.pdf" "main" 1736110949 0
+["pdflatex"] 1736698520 "c:/Users/grego/Documents/code/ot_final/report/main.tex" "main.pdf" "main" 1736698524 0
   "C:/Users/grego/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1734185076 113428 a280e18065651d82029025b185cb382a ""
   "C:/Users/grego/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1095.pk" 1719568939 28976 d9db75ca4b56c83a8f70afe4fe96ae09 ""
   "C:/Users/grego/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200.pk" 1717156662 31952 8bcd38facc752fc208bbb3dba0164919 ""
@@ -144,7 +144,7 @@
   "C:/Users/grego/AppData/Local/Programs/MiKTeX/tex/latex/setspace/setspace.sty" 1670403145 22490 8cac309b79a4c53a4ffce4b1b07aead0 ""
   "C:/Users/grego/AppData/Local/Programs/MiKTeX/tex/latex/titlesec/titlesec.sty" 1699094857 48766 0b93839be28e9744a24c45075c75b2e2 ""
   "C:/Users/grego/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "c:/Users/grego/Documents/code/ot_final/report/main.tex" 1736110944 32147 1f4fb27f9c3cf84749388f4eb415596f ""
+  "c:/Users/grego/Documents/code/ot_final/report/main.tex" 1736698510 32480 59402d66a3ac25181541d5d309ee1291 ""
   "figures/accuracy_results.png" 1735893563 22207 56f9d6afc8d51d8cb127d50f1f676249 ""
   "figures/accuracy_results_bis.png" 1735979204 32453 7d2c69e8511addd6d58156f9627903c3 ""
   "figures/f1_score_results.png" 1735893551 21723 4bb6967cf326737afe0db5bb9f9eecc9 ""
@@ -157,11 +157,11 @@
   "figures/knn.png" 1735987039 65043 e2661f628bd9c1e1a4c809b5dec404a9 ""
   "figures/time_results.png" 1735893574 20055 d6dcf6d1eaeb195e0704a7b7f8d6e759 ""
   "figures/time_results_bis.png" 1735979230 26972 31f7ac187be8a0ff5eab5062ce40b677 ""
-  "main.aux" 1736110947 7589 dfafb9bebceb1c8a8643f31ee4b7b3d3 "pdflatex"
+  "main.aux" 1736698523 7589 b121e0418fe548463cfba02a4e1295e0 "pdflatex"
   "main.bbl" 1736108589 15434 46fb7ef5543044ccddc8afed66c3ea91 "biber main"
-  "main.out" 1736110947 3195 d5798a4d69f890ca6e86de0ca91bd1f8 "pdflatex"
-  "main.run.xml" 1736110947 2323 7b681c5726d3f75dff32db60ac0f2508 "pdflatex"
-  "main.tex" 1736110944 32147 1f4fb27f9c3cf84749388f4eb415596f ""
+  "main.out" 1736698523 3195 d5798a4d69f890ca6e86de0ca91bd1f8 "pdflatex"
+  "main.run.xml" 1736698523 2323 7b681c5726d3f75dff32db60ac0f2508 "pdflatex"
+  "main.tex" 1736698510 32480 59402d66a3ac25181541d5d309ee1291 ""
   (generated)
   "main.aux"
   "main.bcf"

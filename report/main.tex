@@ -103,7 +103,7 @@ This notion was studied in the MVA course Machine Learning For Time Series, from
 The intuition behind this matrix is to measure the variation of the signal between two nodes of the graph.
 Considering a node $v_i$, its feature $x_i \in \mathbb{R}^m$ and the corresponding local variation $\Delta(x_i) \in \mathbb{R}^m$, the authors define the feature embedding function as $\xi_f(v_i) = [x_i, \Delta(x_i)] \in \mathbb{R}^{2m}$.
 
-Finally, the feature similarity matrix, that will later be used as a cost matrix in the Wasserstein distance, is defined as  matrix in $\mathbb{R}^{n_1 \times n_2}$: $C^V(i,j) = d_f(a_i, a_j) $, with $d_f$ a distance function, which will be the $L_2$ distance in the paper.
+Finally, the feature similarity matrix, that will later be used as a cost matrix in the Wasserstein distance, is defined as  matrix in $\mathbb{R}^{n_1 \times n_2}$: $C^V(i,j) = d_f(\xi_f(v_i), \xi_f(v_j)) $, with $d_f$ a distance function, which will be the $L_2$ distance in the paper.
 
 This cost function means that it costs many to match nodes with different features, in terms of values but also of variations. 
 The intuition behind this is that we want to take into account the behaviour of the graph signal when assessing the difference between two graphs.
@@ -144,7 +144,8 @@ This distance preserves a proximity between nodes connectes in the transport pla
 % Le coût est élevé si duex noeuds connectés sur un graphe sont envoyés à des endroits distants. 
 
 
-A result from the paper is that this distance is strongly convex and smooth with respect to $\gamma$, which provides guarantees for the convergence of the algorithm.\\
+A result from the paper is that this distance is strongly convex and smooth with respect to $\gamma$, which is supposed to provide guarantees for the convergence of the algorithm.
+However, the strong convexity is not used in teh proof, only the $L$-smoothness of the dot product with the matrix. \\
 
 
 \subsection{GW : a regularization term to preserve pairwise similarity}
@@ -157,7 +158,7 @@ $L_2(C_1^P(i,j), C_2^P(k,l)) = \left\lvert C_1^P(i,j) - C_2^P(k,l) \right\rvert 
 
 The Gromov-Wasserstein distance is then defined as : \\
 
-$GW(\mu, \nu) = \underset{\gamma \in \pi(\mu, \nu)}{\operatorname{min}} {\left\langle \gamma , L_2(C_1^P, C_2^P) \otimes \gamma \right\rangle}_F - \lambda_g \Theta_g(\gamma)$, with $\Theta_g(\gamma) $ the Kullback-Leibler divergence between $\gamma$ and a prior distribution named $\gamma '$ in the paper.
+$GW(\mu, \nu) = \underset{\gamma \in \pi(\mu, \nu)}{\operatorname{min}} {\left\langle \gamma , L_2(C_1^P, C_2^P) \otimes \gamma \right\rangle}_F - \lambda_g \Theta_g(\gamma)$, with $\Theta_g(\gamma) $ the Kullback-Leibler divergence between $\gamma$ and a prior distribution named $\gamma '$ in the paper, which is not explicitely given. 
 
 The authors note that the Gromov Wasserstein distance is not convex, but the introduction of the regularization term enables to have better convergence properties. \\[2cm]
 
@@ -248,6 +249,7 @@ However, $e^{\frac{x^T x'}{\sigma^2}} = \sum_{k=0}^{\infty} \frac{1}{k!} \left( 
 
 As discussed above, a key step of the method is to define an embedding function that takes as an input a node and outputs a vector in $\mathbb{R}^m$.
 Two embedding functions are used: one for the features on the node ($\xi_f$) and one for the structure of the node ($\xi_s$).
+The embedding of $\xi_f$ is explained in \ref{CV}, but the embedding of $\xi_s$ is done through heat kernel random walk.
 The idea of the heat kernel random walk is to learn for each graph an embedding function. 
 The method is explained in \cite{abu2018watch}. 
 The idea is to randomly select a node of the graph ($v_0$), and then to randomly select a neighbour of this node($v_1$), and continue until a certain number of steps is reached.
@@ -364,7 +366,7 @@ The results of the first experiment, which consist into assessing the performanc
 We can note from \ref{tab:results} that the Gromov-Regularization term diminishes the performances of the algorithm. 
 Indeed, the F1-score and the accuracy are higher when $\beta_2$ is set to 0.
 It makes sense when considering that this term is a non convex one and should therefore prevent good convergence. 
-Another observation is that the Sinkhorn algorithm has very bad results (non convergence errors were raised during the training), which is surprising as theoretical results state that it should converge. 
+Another observation is that the Sinkhorn algorithm has very bad results (non convergence errors were raised during the training, because infinite avlues were met), which is surprising as theoretical results state that it should converge. 
 Moreover, it is surprising to observe that the different parameters have little impact on the performance of the classifiers. 
 Indeed, the authors have already tested the impact of the different parameters and had concluded that they improved significantly the results and sometimes helped to make the computations faster. 
 Finally, one can observe that a mere random forest classifier has roughly the same performances as the normal classifier from the paper, for a computational time drastically lower. 
